@@ -31,3 +31,18 @@ Route::get('/{year}/{month}/{day}/', function ($year, $month, $day) {
     $weekDaysNames = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
     return "День недели: $weekDaysNames[$weekDay]";
 })->where(['year' => '\d{4}', 'month' => '(0?[1-9]|1[0-2])', 'day' => '(0?[1-9]|[1-2][0-9]|3[0-1])']);
+
+Route::get('/user/user_name/{name}', function ($userName) {
+
+    $users = [
+        'user1' => 'city1',
+        'user2' => 'city2',
+        'user3' => 'city3',
+        'user4' => 'city4',
+        'user5' => 'city5'
+    ];
+    if (array_key_exists($userName, $users))
+        return "Город пользователя $userName: $users[$userName]";
+    else
+        return "Нет такого пользователя!";
+});
