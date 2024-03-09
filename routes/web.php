@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,6 @@ Route::get('/user/user_name/{name}', function ($userName) {
     else
         return "Нет такого пользователя!";
 });
+
+Route::get('/pages/show/{id?}',[PageController::class, 'showOne']);
+Route::get('/pages/all', [PageController::class, 'showAll']);
