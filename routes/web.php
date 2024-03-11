@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ViewTestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,3 +51,11 @@ Route::get('/user/user_name/{name}', function ($userName) {
 
 Route::get('/pages/show/{id?}',[PageController::class, 'showOne']);
 Route::get('/pages/all', [PageController::class, 'showAll']);
+
+Route::get('/ViewTest/metod1/', [ViewTestController::class, 'metod1']);
+Route::get('/ViewTest/metod2/', [ViewTestController::class, 'metod2']);
+Route::get('/ViewTest/metod3/', [ViewTestController::class, 'metod3']);
+
+Route::get('/ViewTest/links/', [ViewTestController::class, 'links']);
+
+Route::get('/ViewTest/users/', [ViewTestController::class, 'users']);
