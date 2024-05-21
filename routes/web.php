@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ViewTestController;
+use App\Http\Controllers\EmlpoyeesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,3 +60,13 @@ Route::get('/ViewTest/metod3/', [ViewTestController::class, 'metod3']);
 Route::get('/ViewTest/links/', [ViewTestController::class, 'links']);
 
 Route::get('/ViewTest/users/', [ViewTestController::class, 'users']);
+
+Route::get('/EmployeesTest/employ/Task1', [EmlpoyeesController::class, 'showTask1']);
+Route::get('/EmployeesTest/employ/Task3', [EmlpoyeesController::class, 'showTask2']);
+Route::get('/EmployeesTest/employ/Task4', [EmlpoyeesController::class, 'showTask3']);
+Route::get('/EmployeesTest/employ/Task5', [EmlpoyeesController::class, 'showTask4']);
+Route::get('/EmployeesTest/employ/Task6', [EmlpoyeesController::class, 'showTask5']);
+Route::get('/EmployeesTest/employ/Task7', [EmlpoyeesController::class, 'showTask6']);
+Route::get('/EmployeesTest/employ/Task8', [EmlpoyeesController::class, 'showTask7']);
+Route::get('/EmployeesTest/employ/Task9', [EmlpoyeesController::class, 'showTask8']);
+Route::get('/EmployeesTest/employ/Task10', [EmlpoyeesController::class, 'showTask9']);
