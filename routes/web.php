@@ -70,3 +70,7 @@ Route::get('/EmployeesTest/employ/Task7', [EmlpoyeesController::class, 'showTask
 Route::get('/EmployeesTest/employ/Task8', [EmlpoyeesController::class, 'showTask7']);
 Route::get('/EmployeesTest/employ/Task9', [EmlpoyeesController::class, 'showTask8']);
 Route::get('/EmployeesTest/employ/Task10', [EmlpoyeesController::class, 'showTask9']);
+Route::get('/EmployeesTest/employ/Task11', [EmlpoyeesController::class, 'showTask10']);
+Route::get('/EmployeesTest/employ/Task12', [EmlpoyeesController::class, 'showTask11']);
+Route::get('/EmployeesTest/employ/Task13', [EmlpoyeesController::class, 'showTask12']);
+Route::get('/EmployeesTest/employ/Task14', [EmlpoyeesController::class, 'showTask13']);

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class EmlpoyeesController extends Controller
 {
@@ -89,7 +91,54 @@ class EmlpoyeesController extends Controller
     public function showTask9(){
         
         $employees = DB::table('employees')->whereYear('birthday', '=', 1990)->get();
-        return view('viewTest.employees', ['employees' => $employees, 'Num' => 9]);
+        return view('viewTest.employees', ['employees' => $employees, 'Num' => 10]);
+
+    }
+
+    public function showTask10(){
+        
+        DB::table('users')->insert([
+            [
+                'login' => Str::random(10),
+				'email' => Str::random(10).'@gmail.com',
+				'password' => Hash::make('12345'),
+            ]
+        ]);
+
+    }
+    public function showTask11(){
+        
+        DB::table('users')->insert([
+            [
+                'login' => Str::random(10),
+				'email' => Str::random(10).'@gmail.com',
+				'password' => Str::random(10),
+            ],
+            [
+                'login' => Str::random(10),
+				'email' => Str::random(10).'@gmail.com',
+				'password' => Str::random(10),
+            ],
+            [
+                'login' => Str::random(10),
+				'email' => Str::random(10).'@gmail.com',
+				'password' => Str::random(10),
+            ]
+        ]);
+
+    }
+    public function showTask12(){
+        
+        DB::table('users')->where('id', 3)->update([
+                'login' => Str::random(10),
+				'email' => Str::random(10).'@gmail.com',
+				'password' => Str::random(10),
+        ]);
+
+    }
+    public function showTask13(){
+        
+        DB::table('users')->where('id', 4)->delete();
 
     }
 }
